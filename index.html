@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="neon.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Courgette&family=Fredoka+One&family=Kaushan+Script&family=Merriweather+Sans&family=Merriweather:wght@300&family=Notable&family=Orbitron&family=Pacifico&family=Rubik:wght@300&family=Saira+Stencil+One&family=Tangerine:wght@700&display=swap" rel="stylesheet">
+    <title>Nikitha</title>
+</head>
+<body>
+  <div id="head"> 
+<div class="main">
+    <span class="letter1">N</span>
+    <span class="letter2">I</span>
+    <span class="letter3">K</span>
+    <span class="letter4" id="let2"><p><button id="button">TAP</button></p>I</span>
+    <span class="letter5">T</span>
+    <span class="letter6">H</span>
+    <span class="letter7">A</span>
+</div>
+  </div>
+
+<script>
+    let button=document.getElementById('button');
+
+    button.addEventListener('click',function(){
+        let a=document.getElementById('head');
+        const myElement = document.querySelectorAll('.letter1,.letter2, .letter3, .letter4, .letter5, .letter6, .letter7');
+
+        let bu=document.querySelector('button');
+        
+        if(a.style.background!='black'){
+            a.style.background='black';
+            button.style.fontSize='6.5%';
+            button.style.background='aqua';
+            button.style.color='black';
+            button.style.fontWeight='bold';
+            bu.classList.add('bu');
+            myElement.forEach(Element=>{
+                Element.classList.add('my-class');
+                
+            })
+        }
+        else{
+            button.style.fontSize='7%';
+            a.style.background ='linear-gradient(45deg,rgb(3, 3, 46),rgb(0, 0, 0))';
+            bu.classList.remove('bu');
+            button.style.background='grey';
+            button.style.boxShadow='none';
+            button.style.color='aqua';
+            button.style.fontWeight='normal';
+            myElement.forEach(Element=>{
+                Element.classList.remove('my-class');
+
+            })
+     
+            
+        }
+    })
+</script>
+
+</body>
+</html>
